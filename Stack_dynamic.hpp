@@ -6,7 +6,7 @@ struct Stack_d
     int capacity        = 0;
     size_t element_size = 0;
 
-    void **content      = nullptr;
+    void *content      = nullptr;
 };
 
 Stack_d *stack_ctr (size_t size, size_t element_size);

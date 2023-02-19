@@ -16,13 +16,13 @@ static void third_test  (int number_of_tests, FILE *result);
 
 Stack_d *stack_ctr(size_t size, size_t element_size)
 {
-    Stack_d *st = (Stack_d *)calloc(element_size, sizeof(Stack_d));
+    Stack_d *st = (Stack_d *)calloc(1, sizeof(Stack_d));
 
     st->size         = 0;
     st->capacity     = size;
     st->element_size = element_size;
 
-    st->content      = (void **)calloc(element_size, st->capacity);
+    st->content      = (void *)calloc(element_size, st->capacity);
 
     return st;
 }
@@ -31,7 +31,7 @@ int push_d(Stack_d *st, void *buff)
 {
     if (st->size >= st->capacity)
     {
-        st->content = (void **)realloc(st->content, 2*(st->capacity+1) * st->element_size);
+        st->content = (void *)realloc(st->content, 2*st->capacity * st->element_size);
         st->capacity = 2*st->capacity;
     }
     if (st == nullptr)
