@@ -169,4 +169,5 @@ Average time: 476.41 ms
 
 ---------------------------------------------------
 
- #Сonclusion: a stack on a dynamic array is several times faster than on a singly linked lisС
+ Сonclusion: a stack on a dynamic array is several times faster than on a singly linked list
+--------------------------------
